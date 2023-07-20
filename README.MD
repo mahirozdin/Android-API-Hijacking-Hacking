@@ -37,9 +37,25 @@ This section will cover some of the most common vulnerabilities found in APIs, i
 
 We will demonstrate how these vulnerabilities can be exploited and provide recommendations on how to prevent them.
 
-## Protecting User Data
+## Getting Started : Man-in-the-Middle (MITM)
 
-Data privacy is of utmost importance. In this section, we'll discuss techniques to protect user data on Android devices and while communicating with APIs. Topics include secure data storage, token management, and data anonymization.
+### Intercept HTTPS Traffic On A Android Emulator
+
+#### Windows
+
+Name of the tool we are going to use is [mitmproxy](https://mitmproxy.org/) Download the Windows Installer.
+.
+..
+.
+.
+.
+Will be added soon.
+
+
+
+
+
+
 
 ## Reporting Vulnerabilities
 
