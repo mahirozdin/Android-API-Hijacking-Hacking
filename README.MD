@@ -6,6 +6,8 @@ Welcome to the Android App Security and API Vulnerabilities repository! This rep
 
 The content presented in this repository is for educational purposes only. It is essential to use this knowledge responsibly and adhere to ethical guidelines when performing security testing on any system. Unauthorized access or tampering with systems and data without proper authorization is illegal and unethical.
 
+# I'm always in a hurry, unfortunately I've never been a tidy person... I would appreciate it if someone who benefits from this could do a public service and edit this guide with pictures and detailed markdown syntax <3 You just need to create a Pull Request. Thanks for your contribution!
+
 ## Table of Contents
 
 1. [Introduction](#introduction)
@@ -44,12 +46,30 @@ We will demonstrate how these vulnerabilities can be exploited and provide recom
 #### Windows
 
 Name of the tool we are going to use is [mitmproxy](https://mitmproxy.org/) Download the Windows Installer.
-.
-..
-.
-.
-.
-Will be added soon.
+
+1 ) Open cmd and type ipconfil /all
+2 ) Get your local IPv4 Address
+3 ) Open Android Studio and run an emulator
+4 ) Set your emulators proxy to IPV4:8080
+5 ) Run mitmweb mit proxy client.
+6 ) On the emulator browser go to [http://mitm.it/](http://mitm.it/) 
+7 ) Download .cert CA Certificate for mit proxy.
+8 ) Open device settings and under security->advanced There is a tab to install CA certificates pick the cert you downloaded/
+
+Basic setup is done and mit proxy is ready to observe traffic on your local host [http://127.0.0.1:8081/#/flows/](http://127.0.0.1:8081/#/flows/)
+
+Most likely on most of the applications you want to investigate you will get an error message (sslv3 alert certificate unknown)
+So you need to bypass the ssl-handshake on the APK that you trying to investigate for that purpose ;
+
+1 ) Create a folder on the computer
+2 ) enter the folder in Powershell
+3 ) and run command "npm install -g apk-mitm" (to run the command nodejs npm have to be installed.)
+4 ) Add APK you want to investigate to the folder and rename it as x.apk
+5 ) run command "apk-mitm x.apk" 
+6 ) This command will automaticaly patch the apk to bypass ssl-handshakes.
+7 ) There w'll be a file named "x-patched.apk" when its done. Uninstall the original app and install x-patched.apk to the device.
+8 ) Run the application and you will be able to monitor HTTP Request over mitmproxy 
+
 
 
 
