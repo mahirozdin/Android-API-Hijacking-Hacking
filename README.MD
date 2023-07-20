@@ -1,4 +1,5 @@
-# Android App Security and API Vulnerabilities
+# Android App API Hijacking - Hacking
+
 
 Welcome to the Android App Security and API Vulnerabilities repository! This repository aims to educate developers about common security issues that can occur in Android applications and APIs and provides guidance on how to prevent and mitigate them.
 
